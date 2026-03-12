@@ -16,7 +16,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ['https://advosia-backend.onrender.com', 'http://localhost:3000'],
+  origin: ['https://advosia-backend.onrender.com', 'http://localhost:3000', /^https:\/\/.*\.vercel\.app$/],
   credentials: true
 }));
 app.use(express.json());
